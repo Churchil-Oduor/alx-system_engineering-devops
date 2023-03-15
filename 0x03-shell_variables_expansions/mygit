@@ -1,0 +1,7 @@
+#!/bin/bash
+new_file=$(ls -t|head -n 1)
+chmod u+x $new_file
+git add $new_file
+git commit -m "Adding file $new_file"
+git push
+
