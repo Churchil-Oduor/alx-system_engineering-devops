@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # checking if any argument has been passed
 if [ "$#" -eq 0 ]; then
