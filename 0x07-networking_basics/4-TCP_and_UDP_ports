@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
+
+# this bash script file runs netstat
 netstat
