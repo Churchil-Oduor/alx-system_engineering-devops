@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-
-# checking if any argument has been passed
+#
 # This code tries to ping into the passed IP
 
 count=0
