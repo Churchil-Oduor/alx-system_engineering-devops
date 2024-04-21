@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
+
 # checking if any argument has been passed
-# checking if argument is pased
+# This code tries to ping into the passed IP
 
 count=0
 if [ "$#" -eq 0 ]; then
