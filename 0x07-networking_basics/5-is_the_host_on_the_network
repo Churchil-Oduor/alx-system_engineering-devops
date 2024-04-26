@@ -8,7 +8,7 @@ if [ "$#" -eq 0 ]; then
 else
 	until [ $count -eq 5 ]
 	do
-		ping $1
+		ping "$1"
 		((count++))
 	done
 
