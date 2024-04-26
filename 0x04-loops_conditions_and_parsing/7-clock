@@ -7,17 +7,15 @@
 minutes=1
 hours=0
 
-echo "Hour: $hours"
-((hours++))
-while [ $hours -le 12 ];
+while [ $hours -lt 13 ];
 do
+	echo "Hour: $hours"
 	while [ $minutes -lt 60 ];
 	do
 		echo "$minutes"
 		((minutes++))
 	done
 	minutes=1
-	echo "Hour: $hours"
 	((hours++))
 done
 
