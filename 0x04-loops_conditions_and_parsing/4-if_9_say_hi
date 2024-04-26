@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # displays the text Best School 10 times
 # in the 9th iteration it dispplays Hi on a new line
 # uses while

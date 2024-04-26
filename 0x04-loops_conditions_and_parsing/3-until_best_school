@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # uses until to print the text -> Best School ten times
 
 count=0
