@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# this bash file extracts the suffixed name of files in
+# the current working directory
+
+for file in * ; # selecting item in the current working directory
+do
+	if [[ $file == *-* ]]; # checking to see if the selected file has a dash
+	then
+		new_file_name="${file#*-}"
+		echo "$new_file_name"
+	else
+		echo "$file"
+	fi
+
+done

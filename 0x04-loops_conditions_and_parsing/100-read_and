@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+env /etc/passwd/ | grep -E USERNAME | USERID|PWD
