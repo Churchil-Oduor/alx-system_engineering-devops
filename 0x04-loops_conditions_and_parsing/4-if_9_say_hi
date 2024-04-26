@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# displays the text Best School 10 times
+# in the 9th iteration it dispplays Hi on a new line
+# uses while
+
+count=0
+
+while [ $count -ne 10 ];
+do
+	if [ $count -eq  8 ]; then
+		echo "Hi"
+	else
+		echo "Best School"
+	fi
+	((count++))
+done

@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# bash script that uses while loop and if else statement
+# displays bad luck for the 4th loop iteration
+# displays good luck for the 8th loop iteration
+# displays Best School for the other loops iteration
+
+count=0
+
+while [ $count -ne 10 ];
+do
+	if [ $count -eq 3 ]; # 4th iteration
+	then
+		echo "bad luck"
+	elif [ $count -eq 7 ]; 
+	then 
+		echo "good luck"
+	else
+		echo "Best School"
+	fi
+	((count++))
+done

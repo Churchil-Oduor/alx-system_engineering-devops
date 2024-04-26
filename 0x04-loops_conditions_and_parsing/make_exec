@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+chmod u+x *
+chmod -x README.md *.pub
