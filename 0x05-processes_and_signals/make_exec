@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# makes the bash scripts in the directory executable except the README.md file
+
+for file in * ; # looping through all the files present in the diectory
+do
+	if [[ $file != *.md* ]]; then # checking to see if file i a readme.md file
+		chmod u+x "$file"
+	fi
+done

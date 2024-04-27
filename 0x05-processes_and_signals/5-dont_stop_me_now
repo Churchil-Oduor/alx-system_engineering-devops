@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# kills the process ./4-to_inifity_and_beyond
+list=$(ps -u | grep ./4-to_infinity_and_beyond)
+count=0
+for item in $list; do
+	if [ $count -eq 1 ]; then
+		kill $item
+		exit
+	fi
+	((count++))
+done
