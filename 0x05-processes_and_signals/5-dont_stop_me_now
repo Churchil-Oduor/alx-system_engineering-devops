@@ -4,7 +4,7 @@ list=$(ps -u | grep ./4-to_infinity_and_beyond)
 count=0
 for item in $list; do
 	if [ $count -eq 1 ]; then
-		kill $item
+		kill "$item"
 		exit
 	fi
 	((count++))
