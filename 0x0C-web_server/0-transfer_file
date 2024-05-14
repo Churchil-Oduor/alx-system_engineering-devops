@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 #a bash script that transfers a file from our client to a entered
 num_entries=$#
-chmod +x 0-transfer_file
 if [ $num_entries != 4 ]; then
 	echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
 	exit 1
