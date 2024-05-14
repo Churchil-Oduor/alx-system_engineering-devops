@@ -23,7 +23,7 @@ sudo sed -i 's/default_server//g' "${sites_available_dir}${dot_com_file}"
 sudo sed -i "s|root /var/www/html;|root /var/www/greet.com/html;|g" "${sites_available_dir}${dot_com_file}"
 sudo sed -i "s|server_name _;|server_name $server_name;|g" "${sites_available_dir}${dot_com_file}"
 
-# deleting the symbolic link of the default nginx site
+# deleting the symbolic link of the default nginx sitei
 sudo rm -f "${sites_enabled_dir}default"
 
 # creating a symbolic link in the /etc/nginx/sites-enabled directory
