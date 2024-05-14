@@ -27,4 +27,8 @@ sudo sed -i "s|server_name _;|server_name $server_name;|g" "${sites_available_di
 sudo rm -f "${sites_enabled_dir}default"
 
 # creating a symbolic link in the /etc/nginx/sites-enabled directory
-sudo ln -s "${sites_available_dir}${dot_com_file}" "${sites_enabled_dir}${dot_com_file}"
+if  [ ! -L "${sites_enabled_dir}${dot_com_file}" ]; then
+	sudo ln -s "${sites_available_dir}${dot_com_file}" "${sites_enabled_dir}${dot_com_file}"
+fi
+# reload the nginx server
+sudo service nginx reload
