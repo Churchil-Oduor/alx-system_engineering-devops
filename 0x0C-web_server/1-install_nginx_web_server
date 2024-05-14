@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# script to install and configure nginx server
+sudo apt update
+sudo apt-get -y install nginx # installs the nginx server
+server_block_dir=/var/www/greet.com/html/
+sites_available_dir=/etc/nginx/sites-available/
+
+sudo mkdir -p "$server_block_dir"
+sudo chown -R "$USER:$USER" "$server_block_dir"
+
+sudo chmod -R 755 /var/www
+echo Hello World! > "$server_block_dir"index.html
+sudo cp "$sites_available_dir"default "$sites_available_dir"greet.com
+
+sudo sed -i 's/default_server//g' "$sites_available_dir"greet.com
+sudo sed -i 's/root \/var\/www\/html;/root \/var\/www\/greet.com\/html;/g' "$sites_available_dir"greet.com
+sudo sed -i 's/server_name \_;/server_name localhost;/g' "$sites_available_dir"greet.com
+sudo ln -s "$sites_available_dir"greet.com /etc/nginx/sites-enabled/
