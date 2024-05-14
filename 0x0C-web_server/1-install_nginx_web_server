@@ -14,5 +14,5 @@ sudo cp "$sites_available_dir"default "$sites_available_dir"greet.com
 
 sudo sed -i 's/default_server//g' "$sites_available_dir"greet.com
 sudo sed -i 's/root \/var\/www\/html;/root \/var\/www\/greet.com\/html;/g' "$sites_available_dir"greet.com
-sudo sed -i 's/server_name \_;/server_name localhost;/g' "$sites_available_dir"greet.com
+sudo sed -i 's/server_name \_;/server_name 52.91.122.128;/g' "$sites_available_dir"greet.com
 sudo ln -s "$sites_available_dir"greet.com /etc/nginx/sites-enabled/
