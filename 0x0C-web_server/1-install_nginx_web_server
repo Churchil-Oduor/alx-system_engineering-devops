@@ -32,3 +32,4 @@ if  [ ! -L "${sites_enabled_dir}${dot_com_file}" ]; then
 fi
 # reload the nginx server
 sudo service nginx reload
+echo "Nginx Server installed and configured Successfully!!"
