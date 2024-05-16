@@ -8,6 +8,6 @@ else
 	ip=$2
 	username=$3
 	path_to_key=$4
-        sudo scp -i "$path_to_key" "$path_to_file" "$username@$ip:~/"
+        scp -i "$path_to_key" "$path_to_file" "$username@$ip:~/"
 fi
 
